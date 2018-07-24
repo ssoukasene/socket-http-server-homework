@@ -129,12 +129,6 @@ def response_path(path):
     # If the path is "make_time.py", then you may OPTIONALLY return the
     # result of executing `make_time.py`. But you need only return the
     # CONTENTS of `make_time.py`.
-    
-    content = b"not implemented"
-    mime_type = b"not implemented"
-
-    return content, mime_type
-
 
 def server(log_buffer=sys.stderr):
     address = ('127.0.0.1', 10000)
