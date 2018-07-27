@@ -32,7 +32,7 @@ def response_method_not_allowed():
     """Returns a 405 Method Not Allowed response"""
 
     return b"\r\n".join([
-        b"HTTP/1.1 403 Method Not Allowed",
+        b"HTTP/1.1 405 Method Not Allowed",
         b"",
         b"You can't do that on this server!",
     ])
@@ -129,11 +129,6 @@ def response_path(path):
     # If the path is "make_time.py", then you may OPTIONALLY return the
     # result of executing `make_time.py`. But you need only return the
     # CONTENTS of `make_time.py`.
-    
-    content = b"not implemented"
-    mime_type = b"not implemented"
-
-    return content, mime_type
 
 
 def server(log_buffer=sys.stderr):
